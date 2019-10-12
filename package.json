@@ -20,5 +20,6 @@
   "scripts": {
     "prepublish": "tsc",
     "build": "tsc"
-  }
+  },
+  "keywords": ["promises"]
 }
