@@ -1,28 +1,25 @@
 async function failSafe<T>(promiseInput: Promise<T>): Promise<IFailsavePromise<T>> {
-    console.log("was called...");
     let safeObject: IFailsavePromise<T> = {
-        protectedPromise: promiseInput,
-        status: false,
+        internalPromise: promiseInput,
+        success: false,
         error: null,
         result: null
     };
     
     try {
-        safeObject.result = await safeObject.protectedPromise;
-        safeObject.status = true;
-        console.log("inside-true");
+        safeObject.result = await safeObject.internalPromise;
+        safeObject.success = true;
         
     } catch (error) {
-        safeObject.status = false;
+        safeObject.success = false;
         safeObject.error = error;
-        console.log("inside-false");
     }
     return safeObject;
 };
 
 interface IFailsavePromise<T> {
-    protectedPromise: Promise<T>,
-    status: boolean,
+    internalPromise: Promise<T>,
+    success: boolean,
     error: any | null,
     result: T | null
 }
