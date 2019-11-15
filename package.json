@@ -1,7 +1,7 @@
 {
   "name": "failsafe-promises",
   "author": "Martin Hombach",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "failsafe-promises makes it impossible for promises to throw an exception. This makes management (hopefully) easier",
   "main": "./src/index.js",
   "repository": {
