@@ -10,22 +10,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 function failSafe(promiseInput) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("was called...");
         let safeObject = {
-            protectedPromise: promiseInput,
-            status: false,
+            internalPromise: promiseInput,
+            success: false,
             error: null,
             result: null
         };
         try {
-            safeObject.result = yield safeObject.protectedPromise;
-            safeObject.status = true;
-            console.log("inside-true");
+            safeObject.result = yield safeObject.internalPromise;
+            safeObject.success = true;
         }
         catch (error) {
-            safeObject.status = false;
+            safeObject.success = false;
             safeObject.error = error;
-            console.log("inside-false");
         }
         return safeObject;
     });
