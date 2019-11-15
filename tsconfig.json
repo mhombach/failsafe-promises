@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "lib": ["es2017", "es7", "es6", "dom"],
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "src",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
   "exclude": [
-    "node_modules",
-    "dist"
+    "src"
   ]
 }

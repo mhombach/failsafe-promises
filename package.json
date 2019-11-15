@@ -3,7 +3,7 @@
   "author": "Martin Hombach",
   "version": "1.0.3",
   "description": "failsafe-promises makes it impossible for promises to throw an exception. This makes management (hopefully) easier",
-  "main": "./dist/index.js",
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mhombach/failsafe-promises.git"
