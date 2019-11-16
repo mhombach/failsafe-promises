@@ -22,7 +22,7 @@ The imported (async) function is a wrapper for a normal promise. So, just pass y
 
 ##### Example:
 ```js
-// Wrapping a Database-promise, which now can never again kill your runtime-app by rejecting
+// Wrapping a database-promise, which now can never again kill your runtime-app by rejecting
 const result = await fsp(DB.someQuery());
 ```
 
@@ -54,7 +54,7 @@ If you are not interested in the case of an error and are only interested in if 
 ```js
 import { failSafe as fsp } from 'failsafe-promises';
 
-const { result } = await fsp(DB.someQuery());
+const { result } = await fsp(DB.someQuery());git config --global user.email "email@example.com"
 console.log('result=', result)
 ```
 
