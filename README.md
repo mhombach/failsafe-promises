@@ -9,9 +9,13 @@ This small package is meant to be a shorter syntax for handling rejected promise
 I personally suggest to import with the `as` syntax, so you can keep the naming short.
 
 ##### Example:
-`import { failSafe as fsp } from 'failsafe-promises';`
+```js
+import { failSafe as fsp } from 'failsafe-promises';
+```
 or
-`import { failSafe as __ } from 'failsafe-promises';`
+```js
+import { failSafe as __ } from 'failsafe-promises';
+```
 
 ### Usage
 The imported (async) function is a wrapper for a normal promise. So, just pass your promise into it:
