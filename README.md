@@ -61,4 +61,5 @@ console.log('result=', result)
 ## Plans for the future
 
 I'm not sure if the idea of this package sounds interesting for others, but i could implement some global settings for this package, like logging errors (bool-flag for example) or passing a custom error-handler.
+
 If you have any idea, what could be added/changed, just create an issue on github :)
