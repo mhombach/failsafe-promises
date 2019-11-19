@@ -43,9 +43,9 @@ import { failSafe as fsp } from 'failsafe-promises';
 
 const query = await fsp(DB.someQuery());
 if (query.success) {
-    console.log('result=', query.result)
+    console.log('result=', query.result);
 } else {
-    console.log('result=', query.error)
+    console.log('result=', query.error);
 }
 ```
 
@@ -54,8 +54,18 @@ If you are not interested in the case of an error and are only interested in if 
 ```js
 import { failSafe as fsp } from 'failsafe-promises';
 
-const { result } = await fsp(DB.someQuery());git config --global user.email "email@example.com"
-console.log('result=', result)
+const { result } = await fsp(DB.someQuery());
+console.log('result=', result);
+```
+
+or even
+
+```js
+import { failSafe as fsp } from 'failsafe-promises';
+
+if ( (await fsp(DB.someQuery())).success ) {
+    console.log('query was ok');
+}
 ```
 
 ## Plans for the future
